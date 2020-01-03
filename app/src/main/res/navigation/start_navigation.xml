@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            app:startDestination="@id/start_welcome"
+            android:id="@+id/start_navigation">
+
+    <fragment
+            android:name="com.zjx.githubapp.module.welcome.WelecomeFragment"
+            tools:layout="@layout/fragment_weclcome"
+            android:id="@+id/start_welcome">
+
+        <action android:id="@+id/action_nav_wel_to_login" app:destination="@id/start_login"/>
+
+        <action android:id="@+id/action_nav_wel_to_main" app:destination="@id/start_mainActivity"/>
+
+    </fragment>
+
+    <fragment android:name="com.zjx.githubapp.module.login.LoginFragment"
+              tools:layout="@layout/fragment_login"
+              android:id="@+id/start_login">
+        <action android:id="@+id/action_nav_login_to_main" app:destination="@id/start_mainActivity"/>
+    </fragment>
+
+    <activity android:name="com.zjx.githubapp.module.main.MainActivity"
+              android:id="@+id/start_mainActivity" tools:layout="@layout/activity_main">
+    </activity>
+</navigation>
